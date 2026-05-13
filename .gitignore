@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+.vite
+.env
+.env.local
+
+# Source / drop-in files that shouldn't be tracked
+/ChatGPT Image *.png
+/WhatsApp Image *.jpeg
+/WhatsApp Image *.jpg
+public/assets/hero-mockup-reference.png
