@@ -46,20 +46,14 @@ export default function Hero() {
     <section className="relative isolate w-full h-screen flex flex-col overflow-hidden" aria-label="Hero">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src="/assets/hero-luxury.jpg"
-          alt=""
+        <video
+          src="/assets/hero-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
           aria-hidden
           className="absolute inset-0 h-full w-full object-cover object-[65%_40%]"
-        />
-        {/* Cinematic overlay — anchors left-side copy, fades to transparent on right */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(105deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.72) 32%, rgba(255,255,255,0.35) 56%, transparent 75%)'
-          }}
-          aria-hidden
         />
       </div>
 
@@ -194,19 +188,8 @@ export default function Hero() {
                     show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }
                   }}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className={`relative flex items-center gap-3 overflow-hidden rounded-2xl px-4 pt-4 pb-8 shadow-card sm:px-5 sm:pt-5 sm:pb-9
-                    bg-white/55 backdrop-blur-xl backdrop-saturate-200
-                    ring-1 ring-white/60 border border-white/40`}
+                  className="flex items-center gap-3 rounded-2xl bg-white px-4 pt-3.5 pb-7 shadow-card ring-1 ring-black/[0.02] sm:px-5 sm:pt-4 sm:pb-8"
                 >
-                  {/* Colored top accent border */}
-                  <div
-                    className={`absolute inset-x-0 top-0 h-[3px] rounded-t-2xl ${
-                      tone === 'blue' ? 'bg-brand-blue' :
-                      tone === 'green' ? 'bg-brand-green' :
-                      'bg-brand-orange'
-                    }`}
-                    aria-hidden
-                  />
                   <span
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${TONES[tone]}`}
                     aria-hidden
