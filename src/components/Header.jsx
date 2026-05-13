@@ -61,9 +61,14 @@ export default function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href="tel:+17789002235"
-            className="flex items-center gap-2 text-[13.5px] font-medium text-brand-navy/80 transition-colors hover:text-brand-blue"
+            className={`flex items-center gap-2 text-[13.5px] font-semibold transition-colors hover:text-brand-blue ${
+              scrolled ? 'text-brand-navy' : 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]'
+            }`}
           >
-            <Phone className="h-[15px] w-[15px] text-brand-blue/70" aria-hidden />
+            <Phone
+              className={`h-[15px] w-[15px] transition-colors ${scrolled ? 'text-brand-blue/70' : 'text-white'}`}
+              aria-hidden
+            />
             +1 (778) 900-2235
           </a>
           <a

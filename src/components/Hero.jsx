@@ -7,7 +7,7 @@ import {
   Mail,
   Globe,
   Building2,
-  Award,
+  BarChart2,
   CalendarDays,
   Star,
   ShieldCheck
@@ -30,7 +30,7 @@ const STATS = [
   { icon: Building2, value: '$80M+', label: 'Total Sales Volume', tone: 'blue' },
   { icon: CalendarDays, value: '20+', label: 'Years of Experience', tone: 'green' },
   { icon: Star, value: '90+', label: 'Transactions / Year', tone: 'orange' },
-  { icon: Award, value: 'Top 10%', label: 'Vancouver Realtors', tone: 'blue' }
+  { icon: BarChart2, value: 'Top 10%', label: 'Vancouver Realtors', tone: 'blue' }
 ];
 
 const TONES = {
@@ -54,15 +54,15 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative flex-1 max-w-hero pt-20 pb-3 pl-6 pr-6 md:pl-12 md:pr-8 md:pt-24 lg:pl-20 lg:pr-0 lg:pt-28 xl:pl-24">
-        <div className="grid gap-8 lg:grid-cols-[1fr_330px] lg:gap-6 xl:gap-8">
+      <div className="relative flex-1 max-w-hero pt-32 pb-2 pl-6 pr-6 md:pl-12 md:pr-8 md:pt-40 lg:pl-20 lg:pr-0 lg:pt-52 xl:pl-24">
+        <div className="grid gap-8 items-end lg:grid-cols-[1fr_330px] lg:gap-6 xl:gap-8">
           {/* LEFT */}
           <div className="flex flex-col">
             <motion.h1
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-[52px] font-light leading-[0.97] tracking-[-0.025em] text-brand-blue sm:text-[68px] md:text-[90px] lg:text-[104px] xl:text-[118px]"
+              className="font-display text-[42px] font-light leading-[0.97] tracking-[-0.025em] text-brand-blue sm:text-[54px] md:text-[72px] lg:text-[84px] xl:text-[96px]"
               style={{ fontFeatureSettings: '"kern" 1, "liga" 1', letterSpacing: '-0.025em' }}
             >
               Find Your
@@ -76,7 +76,7 @@ export default function Hero() {
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformOrigin: 'left' }}
-              className="mt-4 h-[3px] w-14 rounded-full bg-brand-orange"
+              className="mt-2.5 h-[3px] w-12 rounded-full bg-brand-orange"
               aria-hidden
             />
 
@@ -84,7 +84,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-4 max-w-xl text-[15px] font-normal leading-relaxed text-brand-blue/75 sm:text-[16px]"
+              className="mt-2.5 max-w-xl text-[14px] font-normal leading-relaxed text-brand-blue/75 sm:text-[15px]"
             >
               Strawhomes.com is the smart way to search real estate in Vancouver, BC.
             </motion.p>
@@ -94,7 +94,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 w-full max-w-[820px]"
+              className="mt-4 w-full max-w-[820px]"
             >
               <div role="tablist" className="flex w-fit overflow-hidden rounded-t-xl">
                 {TABS.map((t) => {
@@ -105,7 +105,7 @@ export default function Hero() {
                       role="tab"
                       aria-selected={active}
                       onClick={() => setTab(t)}
-                      className={`px-7 py-3 text-[14px] font-semibold transition-all sm:px-9 ${active
+                      className={`px-6 py-2 text-[13px] font-semibold transition-all sm:px-8 ${active
                         ? 'bg-brand-blue text-white shadow-[0_-6px_20px_-8px_rgba(11,34,57,0.4)]'
                         : 'bg-white/80 text-brand-navy/75 hover:bg-white'
                         }`}
@@ -116,7 +116,7 @@ export default function Hero() {
                 })}
               </div>
 
-              <div className="rounded-b-2xl rounded-tr-2xl bg-white p-4 shadow-card sm:p-5">
+              <div className="rounded-b-2xl rounded-tr-2xl bg-white p-3 shadow-card sm:p-4">
                 <label className="relative block">
                   <span className="sr-only">Search</span>
                   <Search
@@ -126,7 +126,7 @@ export default function Hero() {
                   <input
                     type="text"
                     placeholder="City, Neighbourhood, Address or MLS® #"
-                    className="h-12 w-full rounded-xl border border-brand bg-brand-soft pl-12 pr-4 text-[15px] text-brand-navy placeholder:text-brand-navy/45 transition-all focus:border-brand-blue focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand-blue/10"
+                    className="h-10 w-full rounded-xl border border-brand bg-brand-soft pl-12 pr-4 text-[14px] text-brand-navy placeholder:text-brand-navy/45 transition-all focus:border-brand-blue focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand-blue/10"
                   />
                 </label>
 
@@ -137,7 +137,7 @@ export default function Hero() {
                   <FilterSelect label="Baths" options={['Any', '1+', '2+', '3+', '4+']} />
                   <button
                     type="button"
-                    className="col-span-2 inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-brand-orange px-7 text-[14px] font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-orange-dark hover:shadow-card-hover focus-ring md:col-span-1"
+                    className="col-span-2 inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-brand-orange px-6 text-[13px] font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-orange-dark hover:shadow-card-hover focus-ring md:col-span-1"
                   >
                     Search Homes
                   </button>
@@ -150,17 +150,17 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-4 flex w-full max-w-[820px] flex-col gap-3 sm:flex-row"
+              className="mt-3 flex w-full max-w-[820px] flex-col gap-2 sm:flex-row"
             >
               <a
                 href="#listings"
-                className="group inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-brand-blue px-6 py-3.5 text-[14.5px] font-semibold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-card-hover"
+                className="group inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-brand-blue px-6 py-4 text-[13.5px] font-semibold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-card-hover"
               >
                 <Home className="h-[18px] w-[18px]" aria-hidden /> Buy a Home
               </a>
               <a
                 href="#value"
-                className="group inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-3.5 text-[14.5px] font-semibold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-green-dark hover:shadow-card-hover"
+                className="group inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-brand-green px-6 py-4 text-[13.5px] font-semibold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-green-dark hover:shadow-card-hover"
               >
                 <TrendingUp className="h-[18px] w-[18px]" aria-hidden /> Value My Home
               </a>
@@ -174,7 +174,7 @@ export default function Hero() {
                 hidden: {},
                 show: { transition: { staggerChildren: 0.08, delayChildren: 0.75 } }
               }}
-              className="mt-8 grid w-full grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
+              className="mt-12 grid w-full grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4"
             >
               {STATS.map(({ icon: Icon, value, label, tone }) => (
                 <motion.li
@@ -184,16 +184,16 @@ export default function Hero() {
                     show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } }
                   }}
                   whileHover={{ y: -4 }}
-                  className="flex items-center gap-4 rounded-2xl bg-white px-5 py-5 shadow-card ring-1 ring-black/[0.02] sm:px-6 sm:py-6"
+                  className="flex items-center gap-3 rounded-2xl bg-white px-4 pt-3.5 pb-7 shadow-card ring-1 ring-black/[0.02] sm:px-5 sm:pt-4 sm:pb-8"
                 >
                   <span
-                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${TONES[tone]}`}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${TONES[tone]}`}
                     aria-hidden
                   >
-                    <Icon className="h-[22px] w-[22px]" />
+                    <Icon className="h-[18px] w-[18px]" />
                   </span>
                   <div className="min-w-0">
-                    <div className="font-display text-[24px] font-semibold leading-none text-brand-blue sm:text-[26px]">
+                    <div className="font-display text-[20px] font-semibold leading-none text-brand-blue sm:text-[22px]">
                       {value}
                     </div>
                     <div className="mt-1.5 text-[12.5px] font-medium leading-tight text-brand-navy/70">
