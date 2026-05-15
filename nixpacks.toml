@@ -5,10 +5,8 @@ nixPkgs = ["nodejs_20"]
 cmds = ["npm ci --prefer-offline"]
 
 [phases.build]
-cmds = [
-  "rm -rf node_modules/.cache",
-  "npm run build"
-]
+cmds = ["npm run build"]
+
 
 [start]
 cmd = "npx serve dist --listen $PORT --no-clipboard"
