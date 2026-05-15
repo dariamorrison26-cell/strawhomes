@@ -40,11 +40,3 @@ skills/
 ChatGPT Image*.png
 image/GEMINI/
 
-# Large video files
-*.mp4
-*.mov
-*.avi
-
-# Local screenshots
-screenshots/
-
