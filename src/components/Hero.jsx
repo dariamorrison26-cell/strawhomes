@@ -43,9 +43,9 @@ export default function Hero() {
   const [tab, setTab] = useState('Buy');
 
   return (
-    <section className="relative isolate w-full h-screen flex flex-col overflow-hidden" aria-label="Hero">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
+    <section className="relative isolate w-full min-h-screen flex flex-col" aria-label="Hero">
+      {/* Background — overflow-hidden here keeps the video contained without clipping page content */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <video
           src="/assets/hero-video.mp4"
           autoPlay
